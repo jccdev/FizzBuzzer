@@ -1,8 +1,8 @@
 using System.Linq;
-using ClearMeasureTest.FizzBuzz;
+using FizzBuzzer.Library;
 using NUnit.Framework;
 
-namespace ClearMeasureTest.UnitTest
+namespace FizzBuzzer.UnitTest
 {
 	[TestFixture]
 	public class FizzBuzzProcessorTests

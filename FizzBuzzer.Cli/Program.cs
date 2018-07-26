@@ -1,7 +1,7 @@
 ﻿using System;
-using ClearMeasureTest.FizzBuzz;
+using FizzBuzzer.Library;
 
-namespace ClearMeasureTest
+namespace FizzBuzzer.Cli
 {
     class Program
     {

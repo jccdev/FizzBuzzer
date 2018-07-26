@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ClearMeasureTest.FizzBuzz
+namespace FizzBuzzer.Library
 {
 	public interface IFizzBuzzProcessor
 	{

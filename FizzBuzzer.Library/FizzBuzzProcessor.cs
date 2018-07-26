@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace ClearMeasureTest.FizzBuzz
+namespace FizzBuzzer.Library
 {
     public class FizzBuzzProcessor : IFizzBuzzProcessor
     {
