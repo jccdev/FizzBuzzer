@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzer.Cli", "FizzBuzze
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzer.Library", "FizzBuzzer.Library\FizzBuzzer.Library.csproj", "{0C6A16CD-3235-404B-9F1E-6C98CE4AFABD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FizzBuzzer.UnitTest", "FizzBuzzer.UnitTest\FizzBuzzer.UnitTest.csproj", "{B93AFB22-C076-44AD-94A7-F5740DCC466D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FizzBuzzer.UnitTest", "FizzBuzzer.UnitTest\FizzBuzzer.UnitTest.csproj", "{B93AFB22-C076-44AD-94A7-F5740DCC466D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{688194F2-4254-41D5-A5E9-08E089AC02E2}"
+	ProjectSection(SolutionItems) = preProject
+		build.cake = build.cake
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -31,7 +31,7 @@ namespace FizzBuzzer.Cli
 				Console.WriteLine("Press any key to continue...");
 		        Console.ReadKey();
 			}
-	        catch (Exception ex)
+	        catch (Exception)
 	        {
 				Console.WriteLine("Exception occurred. Could not parse input. Exiting...");
 	        }
