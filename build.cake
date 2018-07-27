@@ -5,9 +5,16 @@
 Task("Clean")
     .Does(() =>
 {
-	DotNetCoreClean("./FizzBuzzer.Cli");
-	DotNetCoreClean("./FizzBuzzer.Library");
-	DotNetCoreClean("./FizzBuzzer.UnitTest");
+	var settings = new DotNetCoreCleanSettings
+	{
+		Configuration = "Release"
+	};
+
+	var projectFiles = GetFiles("./**/**/*.csproj");
+	foreach(var file in projectFiles)
+    {
+		DotNetCoreClean(file.FullPath, settings);
+	}
 });
 
 Task("Build")
@@ -23,12 +30,18 @@ Task("Build")
 Task("Unit Tests")
     .IsDependentOn("Build")
 	.Does(() =>
-	{
-		DotNetCoreTest("./FizzBuzzer.UnitTest/FizzBuzzer.UnitTest.csproj",new DotNetCoreTestSettings
+	{	
+		var settings = new DotNetCoreTestSettings
 		{
 			NoBuild = true,
 			Configuration = "Release"
-		});
+		};
+		
+		var projectFiles = GetFiles("./**/**/*Test.csproj");
+		foreach(var file in projectFiles)
+		{
+			DotNetCoreTest(file.FullPath, settings);
+		}
 	});
 
 Task("Default")
