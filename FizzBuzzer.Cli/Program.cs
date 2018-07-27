@@ -16,13 +16,25 @@ namespace FizzBuzzer.Cli
 
         static void Main(string[] args)
         {
-	        var fizzProcessor = new FizzBuzzProcessor();
-			var output = fizzProcessor.Process(100);
-	        foreach (var item in output)
+			Console.WriteLine("Welcome to FizzBuzzGenerator CLI.");
+			Console.WriteLine("Please enter the max number of iterations:");
+
+	        try
 	        {
-		        Console.WriteLine(item);
+		        var max = int.Parse(Console.ReadLine());
+		        var fizzProcessor = new FizzBuzzGenerator();
+		        var output = fizzProcessor.Generate(max);
+		        foreach (var item in output)
+		        {
+			        Console.WriteLine(item);
+		        }
+				Console.WriteLine("Press any key to continue...");
+		        Console.ReadKey();
+			}
+	        catch (Exception ex)
+	        {
+				Console.WriteLine("Exception occurred. Could not parse input. Exiting...");
 	        }
-	        Console.ReadKey();
         }
     }
 }
